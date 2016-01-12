@@ -9,19 +9,28 @@ var pike = {
   numberCupsSoldArray: [],
   cupsToLbsArray: [],
   totalBeansSoldArray: [],
-
+//everything in blue is a method inside a variable with a function
   custPerHourGenerate: function() {
+    //for loop starts with 1st hour  and increment by 1 until 15 hours are met how many customers at each hour
      for (var i = 0; i < 15; i++) {
+       //math.floor(math.random) is used to get random number of customers between min and max
+       ///hmmm what is the + 14?
+       //mathfloor rounds down e.g. 23.9292348 (23) math.random (0-1).....(0-19) (about 5) so need to add the min 14.
+       //19 is pushed into custPerHourArray
        pike.custPerHourArray.push(Math.floor(Math.random() * (33 - 14)) + 14);
      }
   },
+
   lbsToGoSold: function() {
+      //for loop setting up for how many lbsToGoSold per each hour
     for (var i = 0; i < pike.custPerHourArray.length; i++) {
+      //push equation: basically taking 19 avg. cust. multi by avglbs to then pushed to lbsToGoSoldArray
       pike.lbsToGoSoldArray.push(pike.custPerHourArray[i] * pike.avgLbs);
     }
   },
   numberCupsSold: function() {
     for (var i = 0; i < pike.lbsToGoSoldArray.length; i++) {
+      //
       pike.numberCupsSoldArray.push(pike.lbsToGoSoldArray[i] * pike.avgCups);
     }
   },
@@ -38,6 +47,9 @@ var pike = {
 
 
   rendering: function() {
+    //call the functions
+    //create var and document.createElement and name of element to connect to HTML
+    //for loop get customer per hour
     this.custPerHourGenerate();
     this.lbsToGoSold();
     this.numberCupsSold();
