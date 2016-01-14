@@ -2,7 +2,7 @@
 //global variables
 var hoursOpen = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12 noon', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm', '8:00pm'];
 
-//constructor
+//object constructor
 function Kiosk (storeName, minCust, maxCust, avgCups, avglbs) {
   this.storeName = storeName;
   this.minCust = minCust;
@@ -47,7 +47,7 @@ Kiosk.prototype.totalBeansSold = function() {
     sectEl.appendChild(trEl);
   }
 
-  Kiosk.prototype.render = function() {
+    Kiosk.prototype.render = function() {
     this.custPerHourGenerate();
     this.totalBeansSold();
 
@@ -74,6 +74,7 @@ Kiosk.prototype.totalBeansSold = function() {
   var southLakeUnion = new Kiosk('South Lake Union', 35, 88, 1.3, 3.7);
   var seaTacAirport = new Kiosk('Sea-Tac Airport', 68, 124, 1.1, 2.7);
   var websiteSales = new Kiosk('Website Sales', 3, 6, 0, 6.7);
+
   //calling
   pike.render();
   capHill.render();
@@ -81,3 +82,26 @@ Kiosk.prototype.totalBeansSold = function() {
   southLakeUnion.render();
   seaTacAirport.render();
   websiteSales.render();
+
+
+  function handleCommentSubmit(event) {
+    console.log(event);
+    event.preventDefault();
+    if (!event.target.co.value || !event.target.min.value || !event.target.max.value || !event.target.cups.value || !event.target.lbs.value) {
+      return alert('Fields cannot be empty!');
+    }
+    var newCompany = new Kiosk(event.target.co.value, event.target.min.value, event.target.max.value, event.target.cups.value, event.target.lbs.value)
+  };
+
+
+
+
+
+  // Just setting up some variables for DOM access
+  var newCompany = document.getElementById('co');
+  var minAmtCust = document.getElementById('min');
+  var maxAmtCust = document.getElementById('max');
+  var avgCups = document.getElementById('cups');
+  var avgPounds = document.getElementById('lbs');
+  // var commentData = [];
+  // }
