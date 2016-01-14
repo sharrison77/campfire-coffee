@@ -18,7 +18,7 @@ function Kiosk (storeName, minCust, maxCust, avgCups, avglbs) {
 
 Kiosk.prototype.custPerHourGenerate = function() {
      for (var i = 0; i < hoursOpen.length; i++) {
-       this.custPerHourGenerateArray.push(Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust)
+       this.custPerHourGenerateArray.push((Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust)));
      }
 };
 
