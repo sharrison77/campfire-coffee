@@ -1,0 +1,220 @@
+body {
+  background-color: #6D9B34;
+  margin: 0px;
+  font-family: verdana, georgia, serif;
+  font-size: 14px;
+}
+
+/*===========Header SECTION================*/
+header {
+  background-color: #2C4D00;
+  margin: 10px;
+  height: 120px;
+  border-radius: 5px;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+  padding-right: 10px;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  background: url("../img/coffee-logo.png") no-repeat;
+}
+
+/*===========NAVIGATION SECTION================*/
+nav > ul {
+  padding: 5px;
+  text-align: center;
+  background-color: #2C4D00;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+nav > ul > li {
+  display: inline;
+  padding: 20px;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  font-family: arial;
+  padding: .2em, 1em,inherit;
+  color: #C5E89B;
+  background-color: #2C4D00;
+}
+
+nav > ul > li > a:hover {
+  color: #2C4D00;
+  background-color: #C5E89B
+}
+
+/*===========MAIN SECTION================*/
+main {
+  background-color: #C5E89B;
+  margin-left: 170px;
+  margin-right: 170px;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 110%;
+  overflow: auto;
+}
+.tentimg {
+  float: left;
+  margin: 1px;
+  border:5px solid #6D9B34;
+}
+.coffeeimg {
+  float: right;
+  margin: 1px;
+  border:5px solid #6D9B34;
+}
+main > ul{
+  text-align: center;
+}
+main > ul > li {
+  display: inline;
+  list-style-type: none;
+  padding: 5px;
+}
+main > ul > li > a {
+  text-decoration: none;
+  font-family: arial;
+  padding: .2em, 1em;*/
+  color: #2C4D00;
+}
+
+main > ul > li > a:hover {
+  color: #2C4D00;
+  background-color: #C5E89B;
+}
+img {
+  border:5px solid #6D9B34;
+  display: block;
+  margin: 0 auto;
+}
+
+/*===========SIDEBAR SECTION================*/
+.sideleft {
+  background-color: #487413;
+  font-size: 105%;
+  padding: 10px;
+  float: left;
+  width: 130px;
+  margin: 5px;
+  border-radius: 5px;
+  margin-left: 10px; margin-right: 10px;
+  margin-top: 0px; margin-bottom: 10px;
+  clear: left;
+}
+.sideleft > p > a {
+  text-decoration: none;
+  font-family: arial;
+  color: #C5E89B;
+}
+.sideleft > p > a:hover {
+  color: #C5E89B;
+  background-color: #2C4D00;
+}
+.sideright {
+  background-color: #487413;
+  font-size: 105%;
+  padding: 10px;
+  float: right;
+  width: 130px;
+  margin: 5px;
+  border-radius: 5px;
+  margin-left: 10px; margin-right: 10px;
+  margin-top: 0px; margin-bottom: 10px;
+  clear: right;
+}
+.sideright > p > a {
+  text-decoration: none;
+  font-family: arial;
+  color: #C5E89B;
+}
+.sideright > p > a:hover {
+  color: #C5E89B;
+  background-color: #2C4D00;
+}
+.imagesidebar {
+  float: right;
+  width: 130px;
+  margin: 5px;
+  border-radius: 5px;
+  margin-left: 10px; margin-right: 10px;
+  margin-top: 0px; margin-bottom: 10px;
+  clear: right;
+  opacity: 1.0;
+  transition: opacity 1s ease-in-out;
+}
+.imagesidebar:hover {
+  opacity: 0.4;
+}
+/*===========HEADING SECTION================*/
+h1 {
+  font-size: 300%;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: cursive;
+  text-align: center;
+  color: red;
+  margin: 0px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+h2 {
+  font-size: 120%;
+  color: #234000;
+  text-align: center;
+}
+h3 {
+  font-size: 120%;
+  color: black;
+}
+h4 {
+  text-align: left;
+  text-decoration: none;
+  color: black;
+}
+/*===========FOOTER SECTION================*/
+footer {
+  background-color: #2C4D00;
+  margin: 10px;
+  height: 60px;
+  clear: both;
+  border-radius: 5px;
+  color: #C5E89B;
+  text-align: center;
+  padding: 15px;
+  font-size: 90%;
+}
+
+footer > ul {
+  padding: 5px;
+  text-align: center;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+footer > ul > li {
+  display: inline;
+  list-style-type: none;
+  padding: 20px;
+}
+
+footer > ul > li > a {
+  text-decoration: none;
+  font-family: arial;
+  padding: .2em, 1em;
+  color: #C5E89B;
+  background-color: #2C4D00;
+}
+
+footer > ul > li > a:hover {
+  color: #2C4D00;
+  background-color: #C5E89B;
+}
