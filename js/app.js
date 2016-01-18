@@ -1,8 +1,10 @@
+//raises little problems that could raise big problems later
 'use strict'
 //global variables
+//where are using for loop and to display
 var hoursOpen = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12 noon', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm', '8:00pm'];
 
-//object constructor
+//object constructor....this.etc are properties
 function Kiosk (storeName, minCust, maxCust, avgCups, avglbs) {
   this.storeName = storeName;
   this.minCust = minCust;
@@ -15,7 +17,8 @@ function Kiosk (storeName, minCust, maxCust, avgCups, avglbs) {
   this.cupsToLbsArray = [];
   this.totalBeansSoldArray = [];
 };
-
+//prototype attaches to constructor
+//add methods to the prototype of constructor allows you to use instances
 Kiosk.prototype.custPerHourGenerate = function() {
      for (var i = 0; i < hoursOpen.length; i++) {
        this.custPerHourGenerateArray.push((Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust)));
@@ -32,39 +35,43 @@ Kiosk.prototype.totalBeansSold = function() {
   }
 };
 
-  var sectEl = document.getElementById('table');
+//This creates table & Location head row
+  var tableEl = document.getElementById('tableData');
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
-  thEl.textContent = 'Time of Day';
+  thEl.textContent = 'Location';
   trEl.appendChild(thEl);
-  // tblEl.appendChild(trEl);
-  sectEl.appendChild(trEl);
+  tableEl.appendChild(trEl);
 
+//This creates hours on table head
   for (var i = 0; i < hoursOpen.length; i++) {
-    var thEl2 = document.createElement('th');
-    thEl2.textContent = hoursOpen[i];
-    trEl.appendChild(thEl2);
-    sectEl.appendChild(trEl);
+    thEl = document.createElement('th');
+    thEl.textContent = hoursOpen[i];
+    trEl.appendChild(thEl);
+    tableEl.appendChild(trEl);
   }
 
+//render method that's attached to the constructor
+//methods are a behavior of the object
     Kiosk.prototype.render = function() {
+      //calling to put data in arrays
     this.custPerHourGenerate();
     this.totalBeansSold();
 
 
-    var trEl2 = document.createElement('tr');
-    var tdEl2 = document.createElement('td');
-    tdEl2.textContent = this.storeName;
-    trEl2.appendChild(tdEl2);
-    sectEl.appendChild(trEl2);
+    var trEl = document.createElement('tr');
+    var tdEl = document.createElement('td');
+    tdEl.textContent = this.storeName;
+    trEl.appendChild(tdEl);
+    // tableEl.appendChild(trEl); Don't need
 
 
     for (var i = 0; i < hoursOpen.length; i++) {
-    var tdEl3 = document.createElement('td');
-    tdEl3.textContent = this.totalBeansSoldArray[i].toFixed(1);
-    trEl2.appendChild(tdEl3);
-    sectEl.appendChild(trEl2);
+    var tdEl = document.createElement('td');
+    tdEl.textContent = this.totalBeansSoldArray[i].toFixed(1);
+    trEl.appendChild(tdEl);
     }
+    tableEl.appendChild(trEl);
   };
 
   //create instances
@@ -83,25 +90,24 @@ Kiosk.prototype.totalBeansSold = function() {
   seaTacAirport.render();
   websiteSales.render();
 
+  // Event listener for Data submission form
+  //listens to data-form not submit button
+  var dataForm = document.getElementById('data-form');
+  dataForm.addEventListener('submit', handleDataSubmit); // once clicked handleDataSubmit function come to play
 
-  function handleCommentSubmit(event) {
+//event handler from line 98-112
+// This function handles Data Submissions
+  function handleDataSubmit(event) {
     console.log(event);
+    //prevents from reloading page
     event.preventDefault();
+    //validation
     if (!event.target.co.value || !event.target.min.value || !event.target.max.value || !event.target.cups.value || !event.target.lbs.value) {
       return alert('Fields cannot be empty!');
     }
+
+    //This creates new instances
     var newCompany = new Kiosk(event.target.co.value, event.target.min.value, event.target.max.value, event.target.cups.value, event.target.lbs.value)
+    //behavior that call kiosk share?
+    newCompany.render();
   };
-
-
-
-
-
-  // Just setting up some variables for DOM access
-  var newCompany = document.getElementById('co');
-  var minAmtCust = document.getElementById('min');
-  var maxAmtCust = document.getElementById('max');
-  var avgCups = document.getElementById('cups');
-  var avgPounds = document.getElementById('lbs');
-  // var commentData = [];
-  // }

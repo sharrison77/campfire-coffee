@@ -3,53 +3,80 @@
   <head>
     <meta charset="utf-8">
     <title>Campfire Coffee</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <title>Campfire Coffee</title>
   </head>
-  <body>
-      <img id = "campfire-coffee"></img>
-      <img id = "family"></img>
-      <img id="fire"></img>
-      <img id="tent"></img>
 
-    <div id="container">
+<body>
+  <header>
+    <h1> campfire coffee</h1>
+    <a class="logo" href="index.html"></a>
+  </header>
 
-      <div id="header">
-        <h1>Campfire Coffee</h1>
-    </div>
-    <div id="content">
-      <div id="nav">
-        <h3> Navigation </h3>
-        <ul>
-          <li>About</li>
-          <li>Contact Us</li>
-          <li>Blog</li>
-          <li>Twitter</li>
-          <li>Store Locations</li>
+<nav>
+  <ul>
+    <li><a href="index.html">home</a></il>
+    <li><a href="#">facebook</a></li>
+    <li><a href="#">blog</a></li>
+    <li><a href="#">twitter</a></li>
+  </ul>
+</nav>
 
-        </ul>
-    </div>
-    <div id="main">
-      <h3>Home Page</h3>
-      <p>
-        Gingerbread gingerbread marshmallow sweet. Biscuit tiramisu cotton candy candy jujubes dessert donut. Soufflé sesame snaps cotton candy powder bear claw candy canes. Chocolate gummies bear claw sesame snaps gingerbread toffee.
-      </p>
-      <p>
-        I love jelly gummi bears cake biscuit ice cream cupcake marzipan. Apple pie dragée marshmallow liquorice lollipop jelly-o sugar plum I love apple pie. Sweet croissant sesame snaps candy macaroon bear claw marshmallow.
-      </p>
-      <p>
-        Brownie chocolate cake cookie gingerbread. Chupa chups dessert soufflé. Lollipop lemon drops pie wafer cheesecake sweet roll. Chupa chups I love jujubes macaroon bonbon lollipop.
-      </p>
-      <p>Caramels toffee tiramisu fruitcake topping carrot cake. Ice cream chocolate jelly beans pudding danish jujubes chupa chups donut fruitcake. I love marzipan croissant sesame snaps marzipan. Wafer bonbon liquorice pastry cotton candy chocolate cake sugar plum apple pie.
-      </p>
-      <p>
-          I love muffin jujubes chocolate I love I love. Lollipop cotton candy bear claw marshmallow I love cake. I love tart biscuit gummi bears. Biscuit danish I love pastry fruitcake cake caramels.
-        </p>
-    </div>
-  </div>
+<aside class="sideleft">
+  <h4>Camping Resources</h4>
+    <p><a href="http://www.rei.com/stores/seattle.html">REI</p>
+    <p><a href="http://www.cabelas.com/">Cabela's</p>
+    <p><a href="http://www.dickssportinggoods.com/products/camping-hiking-gear.jsp">Dick's Sporting Goods</p>
+    <p><a href="http://www.basspro.com/Camping/_/T-12325000000">Bass Pro Shop</p>
+</aside>
 
+<!-- I couldn't figure out why Bass Pro Shop is linking to Store Locations. I think it has something to do with floating  -->
+
+<aside class="sideright">
+  <h4>Store Locations</h4>
+    <p><a href="http://storeimage.address.hours.phonenumber">Pike Place Market</p>
+    <p><a href="http://storeimage.address.hours.phonenumber">Capitol Hill</p>
+    <p><a href="http://storeimage.address.hours.phonenumber">Seattle Public Library</p>
+    <p><a href="http://storeimage.address.hours.phonenumber">South Lake Union</p>
+    <p><a href="http://storeimage.address.hours.phonenumber">Sea-Tac Airport</p>
+</aside>
+
+<!-- I couldn't figure out why every word is linking to the previous link. This all started on line 35. I tried hours to fix it and couldn't -->
+
+<main>
+  <h2>"Campfire Coffee: From the tent to the fire, it's our coffee you require"  </h2>
+  <img class="tentimg" src="img/campsite-tent-night.jpg" alt="tent"></img>
+  <img class="coffeeimg" src="img/campfire-coffee.jpg" alt="coffee"></img>
+</main>
+
+<main>
+  <h2>Brewing</h2>
+    <p>Cupcake ipsum dolor sit. Amet bonbon ice cream. Pastry bear claw chocolate. Jujubes wafer halvah wafer gummies jelly beans lollipop ice cream.
+    Lollipop halvah macaroon chocolate. Cotton candy jelly-o macaroon lollipop carrot cake croissant soufflé soufflé. Sugar plum wafer danish gummi bears ice cream apple pie tiramisu. Pudding pastry oat cake.</P>
+
+    <img src="img/campfire.jpg" alt="campfire"/>
+  <h2>Sustainability</h2>
+    <P>Cookie pie gummies gingerbread soufflé topping. Ice cream cupcake pudding lemon drops candy canes topping macaroon oat cake. Lemon drops gingerbread toffee lollipop jujubes caramels macaroon.
+    Liquorice candy canes apple pie tart pastry carrot cake. Gummi bears candy canes cotton candy tiramisu gingerbread soufflé. Caramels jujubes gummi bears cake gummies macaroon icing.</P>
+
+<main>
+  <h2>Shop for the Family</h2>
+    <p><img src="img/campfire-family.jpg" alt="family"></img>
+      <ul>
+        <li><a href="#">Buy Clothes</a></li>
+        <li><a href="#">Buy Beans</a></li>
+        <li><a href="#">Buy Accessories</a></li>
+      </ul>
+</main>
+
+<footer>
+  <ul>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Careers</a></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
+  &copy; 2016 Campfire Coffee. All Rights Reserved.</footer>
 
 <script src="js/app.js"></script>
-<div id="footer">
-  Copyright &copy; 2016 Campfire Coffee.
-  </body>
+</body>
 </html>
