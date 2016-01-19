@@ -1,0 +1,55 @@
+body {
+  background-color: #6D9B34;
+  margin: 0px;
+  font-family: verdana, georgia, serif;
+  font-size: 14px;
+}
+
+form {
+  margin: 10px;
+  height: 90px;
+}
+
+table {
+  margin: 0 auto;
+  height: 90px;
+}
+/*===========Header SECTION================*/
+header {
+  background-color: #2C4D00;
+  margin: 10px;
+  height: 120px;
+  border-radius: 5px;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+  padding-right: 10px;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  background: url("../img/coffee-logo.png") no-repeat;
+}
+/*===========HEADING SECTION================*/
+h1 {
+  font-size: 300%;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: cursive;
+  text-align: center;
+  color: red;
+  margin: 0px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+h2 {
+  font-size: 120%;
+  color: #234000;
+  text-align: center;
+}
+legend {
+  font-weight: bolder;
+}

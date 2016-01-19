@@ -107,7 +107,9 @@ Kiosk.prototype.totalBeansSold = function() {
     }
 
     //This creates new instances
-    var newCompany = new Kiosk(event.target.co.value, event.target.min.value, event.target.max.value, event.target.cups.value, event.target.lbs.value)
+    var newCompany = new Kiosk(event.target.co.value, parseInt(event.target.min.value), parseInt(event.target.max.value), parseInt(event.target.cups.value), parseInt(event.target.lbs.value))
     //behavior that call kiosk share?
     newCompany.render();
   };
+
+  //clear submission boxes
